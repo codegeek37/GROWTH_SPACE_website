@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 60%;
+}
+:root {
+  --primary-color: #c68313;
+  --secondary-color: #ffd893;
+  --text-color: #181818;
+  --bg-color: #fff;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--secondary-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+body {
+  background: #fff;
+}
+.container {
+  padding: 3rem 10%;
+}
+span {
+  color: var(--primary-color);
+}
+
+/* NAV BAR SECTION */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: var(--bg-color);
+  z-index: 1000;
+  border-bottom: var(--primary-color) 4px solid;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navbar .logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 10px;
+}
+header .navbar .logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+header .navbar .logo h2 span {
+  color: var(--primary-color);
+}
+header .navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header .navbar .nav-links li a {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 10px 15px;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  position: relative;
+}
+header .navbar .nav-links li a:hover {
+  color: var(--primary-color);
+}
+header .navbar .nav-links li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  height: 10%;
+  width: 0;
+  background: var(--primary-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+header .navbar .nav-links li a:hover::after {
+  width: 100%;
+}
+header .navbar .navbtn a {
+  font-size: 2rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border: transparent 2px solid;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+header .navbar .navbtn a:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: var(--primary-color) 2px solid;
+}
+
+/* HERO SECTION */
+#home {
+  overflow: hidden;
+  border: var(--primary-color) 3px solid;
+}
+.home-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -30px;
+  height: 100vh;
+  /* gap: 20px; */
+}
+.home-content .home-text {
+  flex: 1;
+}
+.home-content .home-text p:nth-child(1) {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: fit-content;
+  padding: 10px 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.home-content .home-text p:nth-child(1) img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.home-content .home-text p:nth-child(2) {
+  font-size: 6rem;
+  font-weight: 400;
+  margin-bottom: -20px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.home-content .home-text p:nth-child(3) {
+  font-size: 10rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.home-content .home-text p {
+  font-size: 2rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+.home-content .home-text .home-btn {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.home-content .home-text .home-btn .btn {
+  font-size: 2rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 10px 30px;
+  border: transparent 2px solid;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.home-content .home-text .home-btn .btn-light {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: var(--primary-color) 2px solid;
+}
+.home-content .home-text .home-btn .btn:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: var(--primary-color) 2px solid;
+}
+.home-content .home-text .home-btn .btn-light:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+.home-content .home-img img {
+  width: 43vw;
+  object-fit: cover;
+}
+.home-content .home-partners {
+  position: absolute;
+  bottom: 70px;
+}
+.home-content .home-partners p {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.home-content .home-partners p::after {
+  position: absolute;
+  right: 155px;
+  bottom: 65px;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+.home-content .home-partners .partner-img {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.home-content .home-partners .partner-img img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.home-content .home-partners .partner-img img:hover {
+  opacity: 1;
+}
+
+/* HERO BACKGROUND SHAPE */
+
+.home-content .shape {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  z-index: -1;
+}
+.home-content .shape1 {
+  position: absolute;
+  bottom: 150px;
+  right: 150px;
+  width: 200px;
+  height: 200px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  z-index: -1;
+}
+.home-content .shape2 {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  z-index: -1;
+}
+.home-content .shape3 {
+  position: absolute;
+  top: 500px;
+  right: 500px;
+  width: 100px;
+  height: 100px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* SERVICE US SECTION */
+
+#service {
+  border-bottom: var(--primary-color) 3px solid;
+  border-right: var(--primary-color) 3px solid;
+  border-left: var(--primary-color) 3px solid;
+}
+#service .service-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+#service .service-content .service-img {
+  flex: 1;
+}
+#service .service-content .service-img img {
+  width: 35vw;
+  margin-left: -50px;
+  object-fit: cover;
+}
+#service .service-content .service-text {
+  flex: 1;
+  padding-left: 50px;
+}
+#service .service-content .service-text h2 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  border-radius: 6px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+#service .service-content .service-text .first-p {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: -20px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#service .service-content .service-text .sec-p {
+  font-size: 7rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#service .service-content .service-text p {
+  font-size: 2rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+#service .service-content .service-text .service-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+#service .service-content .service-text .service-card .card {
+  border: var(--primary-color) 3px solid;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+#service .service-content .service-text .service-card .card {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#service .service-content .service-text .service-card .card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+#service .service-content .service-text .service-card .card .card-p p {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 600;
+}
+#service .service-content .service-shape {
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: var(--primary-color);
+  opacity: 0.4;
+  border-radius: 50%;
+  z-index: -1;
+}
+#service .service-content .service-shape1 {
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  width: 350px;
+  height: 350px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* REACH SECTION */
+
+#reach {
+  border-bottom: var(--primary-color) 3px solid;
+  border-right: var(--primary-color) 3px solid;
+  border-left: var(--primary-color) 3px solid;
+}
+#reach .reach-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+#reach .reach-content .reach-text {
+  flex: 1;
+  padding-right: 50px;
+}
+#reach .reach-content .reach-text h2 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: fit-content;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  border-radius: 6px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+#reach .reach-content .reach-text .first-p {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: -20px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#reach .reach-content .reach-text .sec-p {
+  font-size: 7rem;
+  font-weight: 500;
+  margin-bottom: -60px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#reach .reach-content .reach-text .third-p {
+  font-size: 17rem;
+  color: var(--primary-color);
+}
+#reach .reach-content .reach-text p {
+  font-size: 2rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+#reach .reach-content .reach-img img {
+  width: 40vw;
+  object-fit: cover;
+}
+#reach .reach-content .reach-shape {
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  background: var(--primary-color);
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: -1;
+}
+#reach .reach-content .reach-shape1 {
+  position: absolute;
+  bottom: 100px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: var(--primary-color);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: -1;
+}
+#reach .reach-content .reach-shape2 {
+  position: absolute;
+  top: 100px;
+  right: 400px;
+  width: 150px;
+  height: 150px;
+  background: var(--primary-color);
+  opacity: 0.4;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* ABOUT US SECTION */
+#about {
+  border-bottom: var(--primary-color) 3px solid;
+  border-right: var(--primary-color) 3px solid;
+  border-left: var(--primary-color) 3px solid;
+}
+#about .about-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+#about .about-content .about-text h2 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: fit-content;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  border-radius: 6px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+#about .about-content .about-text .first-p {
+  font-size: 8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  gap: 10px;
+}
+#about .about-content .about-text .sec-p {
+  font-size: 2rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+#about .about-content .about-text .about-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+#about .about-content .about-text .about-card .card {
+  border: var(--primary-color) 3px solid;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+#about .about-content .about-text .about-card .card i {
+  font-size: 6rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+#about .about-content .about-text .about-card .card .first-p {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+#about .about-content .about-text .about-card .card .sec-p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 600;
+}

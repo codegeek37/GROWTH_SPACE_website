@@ -28,6 +28,9 @@ html {
 }
 body {
   background: #fff;
+  position: relative;
+  overflow-x: hidden;
+  scroll-padding-top: 100px;
 }
 .container {
   padding: 3rem 10%;
@@ -564,4 +567,270 @@ header .navbar .navbtn a:hover {
   margin: 0;
   line-height: 1.5;
   font-weight: 600;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+  border-right: var(--primary-color) 3px solid;
+  border-left: var(--primary-color) 3px solid;
+}
+#contact .contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+#contact .contact-content .contact-text {
+  text-align: center;
+  padding: 0 20%;
+}
+#contact .contact-content .contact-text h2 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  width: fit-content;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 2rem;
+  font-weight: 400;
+  border-radius: 6px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+#contact .contact-content .contact-text .first-p {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  gap: 10px;
+}
+#contact .contact-content .contact-text .sec-p {
+  font-size: 2rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+#contact .contact-content .contact-form {
+  width: 50%;
+}
+#contact .contact-content .contact-form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#contact .contact-content .contact-form {
+  margin-bottom: 20px;
+}
+#contact .contact-content .contact-form  input,
+#contact .contact-content .contact-form  textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 2rem;
+  border: var(--text-color) 2px solid;
+  border-radius: 6px;
+  outline: none;
+  resize: none;
+}
+#contact .contact-content .contact-form  input:focus,
+#contact .contact-content .contact-form  textarea:focus {
+  border: var(--primary-color) 2px solid;
+}
+#contact .contact-content .contact-form  textarea {
+  height: 150px;
+}
+#contact .contact-content .contact-form .btn {
+  font-size: 2rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 10px 30px;
+  border: transparent 2px solid;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#contact .contact-content .contact-form .btn:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: var(--primary-color) 2px solid;
+}
+#contact .contact-content .contact-shape {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  background: var(--primary-color);
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: -1;
+}
+#contact .contact-content .contact-shape1 {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 150px;
+  height: 150px;
+  background: var(--primary-color);
+  opacity: 0.4;
+  border-radius: 50%;
+  z-index: -1;
+}
+#contact .contact-content .contact-shape2 {
+  position: absolute;
+  top: 50px;
+  right: 400px;
+  width: 100px;
+  height: 100px;
+  background: var(--primary-color);
+  opacity: 0.5;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  padding: 20px 0;
+  background-color: var(--bg-color);
+  border-top: var(--primary-color) 4px solid;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-content .footer-info .logo {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+footer .footer-content .footer-info .logo p {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+footer .footer-content .footer-info .address {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+footer .footer-content .footer-info .contact {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+footer .footer-content .services {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+footer .footer-content .services h3 {
+  font-size: 1.9rem;
+  margin-left: -20px;
+}
+footer .footer-content .services ul li {
+  margin: 10px 0;
+  list-style: disc;
+}
+footer .footer-content .services ul li a {
+  margin: 10px 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+footer .footer-content .services ul li a:hover {
+  color: var(--primary-color);
+}
+footer .footer-content .products {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+footer .footer-content .products h3 {
+  font-size: 1.9rem;
+  margin-left: -20px;
+}
+footer .footer-content .products ul li {
+  margin: 10px 0;
+  list-style: disc;
+}
+footer .footer-content .products ul li a {
+  margin: 10px 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+footer .footer-content .products ul li a:hover {
+  color: var(--primary-color);
+}
+
+footer .footer-content .legal {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+footer .footer-content .legal h3 {
+  font-size: 1.9rem;
+  margin-left: -20px;
+}
+footer .footer-content .legal ul li {
+  margin: 10px 0;
+  list-style: disc;
+}
+footer .footer-content .legal ul li a {
+  margin: 10px 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+footer .footer-content .legal ul li a:hover {
+  color: var(--primary-color);
+}
+footer .footer-content .footer-social {
+  position: absolute;
+  right: 100px;
+  bottom: 15px;
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+footer .footer-content .footer-social .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: -20px;
+  margin-bottom: 20px;
+}
+footer .footer-content .footer-social .social-icons a {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+footer .footer-content .footer-bottom {
+  background-color: var(--primary-color);
+  font-size: 1.7rem;
+  padding-bottom: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+footer .footer-content .footer-bottom p {
+  color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
